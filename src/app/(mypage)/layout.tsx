@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useState } from 'react'
 import Image from 'next/image'
-
+import Navbar from './navbar';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,14 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
-        
-        
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          
+        <Navbar></Navbar>
         {children}
-         
+         {/* Footer */}
+         <footer className="w-full p-4 flex justify-between items-center text-gray-500 text-sm">
+            <div>© 2025 PaiPao. All rights reserved.</div>
+            <div className="flex gap-4">
+              <span>Privacy Policy</span>
+              <span>Terms of Service</span>
+              <span>Contact</span>
+            </div>
+          </footer>
       </body>
       
     </html>
