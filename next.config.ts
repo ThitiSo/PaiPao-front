@@ -8,7 +8,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://1d39-2405-9800-b650-8e6e-31c4-ed20-7180-a1d5.ngrok-free.app/ai/plan', // Target URL
+        destination: 'xxxxxxxxxxxxxxxxxxxxxxx/ai/plan', // Target URL
       },
     ]
   },
